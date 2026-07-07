@@ -1,0 +1,747 @@
+/* ==========================================================
+   SABOREANA
+   Landing Page Premium
+   Mobile First
+========================================================== */
+
+:root{
+
+    --bg:#fff8f2;
+    --marrom:#5b341d;
+    --marrom-claro:#7b4d2b;
+    --dourado:#ffd166;
+    --verde:#25d366;
+    --verde-hover:#1fb558;
+
+    --card:#ffffff;
+
+    --radius:22px;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.12);
+
+    --transition:.25s;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:var(--bg);
+
+    color:var(--marrom);
+
+    line-height:1.5;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ==========================================================
+ HERO
+========================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.35)
+    ),
+
+    url(img/pudim1.jpg);
+
+    background-size:cover;
+
+    background-position:center center;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(700px,100%);
+
+    animation:fade 1s;
+
+}
+
+.hero h1{
+
+    color:#fff;
+
+    font-size:clamp(48px,9vw,82px);
+
+    margin-bottom:15px;
+
+    text-shadow:0 4px 10px rgba(0,0,0,.4);
+
+}
+
+.subtitulo{
+
+    color:#fff;
+
+    font-size:clamp(18px,4vw,24px);
+
+    margin-bottom:35px;
+
+}
+
+.hero-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:58px;
+
+    padding:0 35px;
+
+    background:var(--verde);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:var(--verde-hover);
+
+}
+
+.hero-btn:active{
+
+    transform:scale(.97);
+
+}
+
+/* ==========================================================
+ SEÇÕES
+========================================================== */
+
+section{
+
+    padding:70px 18px;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+}
+
+.descricao{
+
+    text-align:center;
+
+    max-width:650px;
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+    color:#666;
+
+}
+
+
+/* ==========================================================
+ GALERIA
+========================================================== */
+
+.galeria-grid{
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+.galeria-grid img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.galeria-grid img:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+/* ==========================================================
+ PRODUTOS
+========================================================== */
+
+.cards{
+
+    display:grid;
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.25s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.card img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.info{
+
+    padding:22px;
+
+}
+
+.info h3{
+
+    font-size:28px;
+
+    margin-bottom:8px;
+
+}
+
+.peso{
+
+    display:inline-block;
+
+    background:#ffe7a5;
+
+    color:#6d4300;
+
+    padding:5px 12px;
+
+    border-radius:999px;
+
+    font-weight:bold;
+
+    margin-bottom:14px;
+
+}
+
+.info p{
+
+    color:#666;
+
+    margin-bottom:18px;
+
+}
+
+.preco{
+
+    font-size:32px;
+
+    font-weight:bold;
+
+    color:var(--marrom);
+
+    margin-bottom:20px;
+
+}
+/* ==========================================================
+CONTROLE DE QUANTIDADE
+========================================================== */
+
+.controle{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.controle button{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--marrom);
+
+    color:#fff;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.controle button:hover{
+
+    background:var(--marrom-claro);
+
+    transform:translateY(-2px);
+
+}
+
+.controle button:active{
+
+    transform:scale(.92);
+
+}
+
+.controle span{
+
+    min-width:35px;
+
+    text-align:center;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+
+/* ==========================================================
+PEDIDO
+========================================================== */
+
+.pedido{
+
+    padding-top:20px;
+
+}
+
+.pedido-box{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.pedido-box h2{
+
+    margin-bottom:25px;
+
+}
+
+.linha{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:16px 0;
+
+    font-size:18px;
+
+}
+
+.subtotal{
+
+    color:#777;
+
+    font-size:16px;
+
+}
+
+.total{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:var(--marrom);
+
+}
+
+.pedido hr{
+
+    margin:25px 0;
+
+    border:none;
+
+    border-top:1px solid #ddd;
+
+}
+
+
+/* ==========================================================
+BOTÃO WHATSAPP
+========================================================== */
+
+.btn-whats{
+
+    width:100%;
+
+    margin-top:25px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:var(--verde);
+
+    color:#fff;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn-whats:hover{
+
+    background:var(--verde-hover);
+
+    transform:translateY(-2px);
+
+}
+
+.btn-whats:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* ==========================================================
+VÍDEO
+========================================================== */
+
+.video-section{
+
+    text-align:center;
+
+}
+
+.video-wrapper{
+
+    width:min(900px,100%);
+
+    margin:auto;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.video-wrapper iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+    display:block;
+
+}
+
+
+/* ==========================================================
+FOOTER
+========================================================== */
+
+footer{
+
+    margin-top:60px;
+
+    background:#4d2d18;
+
+    color:#fff;
+
+    padding:45px 20px;
+
+    text-align:center;
+
+}
+
+.footer-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.footer-content h3{
+
+    margin-bottom:10px;
+
+    font-size:30px;
+
+}
+
+.footer-content p{
+
+    opacity:.9;
+
+}
+
+
+/* ==========================================================
+ANIMAÇÕES
+========================================================== */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+.card,
+.hero-btn,
+.btn-whats,
+.galeria-grid img{
+
+    animation:fade .8s;
+
+}
+
+
+/* ==========================================================
+TABLET
+========================================================== */
+
+@media(min-width:768px){
+
+    .galeria-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+
+/* ==========================================================
+DESKTOP
+========================================================== */
+
+@media(min-width:1100px){
+
+    section{
+
+        padding:90px 40px;
+
+    }
+
+}
+
+
+/* ==========================================================
+CELULARES
+========================================================== */
+
+@media(max-width:480px){
+
+    .hero{
+
+        min-height:85vh;
+
+        padding:20px;
+
+        background-position:center top;
+
+    }
+
+    .hero h1{
+
+        font-size:52px;
+
+    }
+
+    .subtitulo{
+
+        font-size:18px;
+
+    }
+
+    section h2{
+
+        font-size:28px;
+
+    }
+
+    .info{
+
+        padding:18px;
+
+    }
+
+    .info h3{
+
+        font-size:24px;
+
+    }
+
+    .preco{
+
+        font-size:28px;
+
+    }
+
+    .pedido-box{
+
+        padding:20px;
+
+    }
+
+    .linha{
+
+        font-size:16px;
+
+    }
+
+    .total{
+
+        font-size:24px;
+
+    }
+
+    .btn-whats{
+
+        font-size:18px;
+
+        height:58px;
+
+    }
+
+}

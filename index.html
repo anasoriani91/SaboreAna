@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SaboreAna | Pudins Artesanais</title>
+
+    <meta name="description"
+        content="Pudins artesanais feitos com ingredientes selecionados. Faça seu pedido pelo WhatsApp.">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>SaboreAna</h1>
+
+        <p class="subtitulo">
+            Pudins artesanais preparados com carinho.<br>
+            Escolha seu tamanho favorito e peça pelo WhatsApp.
+        </p>
+
+        <a href="#produtos" class="hero-btn">
+            Fazer meu pedido
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="galeria">
+
+    <h2>Nosso Pudim</h2>
+
+    <div class="galeria-grid">
+
+        <img
+            src="img/logo.jpg"
+            alt="Logo SaboreAna">
+
+        <img
+            src="img/pudim2.jpg"
+            alt="Pudim artesanal SaboreAna">
+
+    </div>
+
+</section>
+
+
+
+<section id="produtos" class="produtos">
+
+<h2>Escolha seu pedido</h2>
+
+<p class="descricao">
+Escolha a quantidade desejada de cada tamanho.
+O resumo será atualizado automaticamente.
+</p>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<img
+src="img/pudim2.jpg"
+alt="Pudim Tradicional 200 gramas">
+
+<div class="info">
+
+<h3>Pudim Tradicional</h3>
+
+<span class="peso">
+200g
+</span>
+
+<p>
+
+Ideal para consumo individual.
+Textura cremosa e sabor caseiro.
+
+</p>
+
+<div class="preco">
+
+R$
+
+<span id="preco200">
+0,00
+</span>
+
+</div>
+
+<div class="controle">
+
+<button
+aria-label="Diminuir quantidade"
+onclick="alterarQuantidade('200',-1)">
+−
+</button>
+
+<span id="qtd200">
+0
+</span>
+
+<button
+aria-label="Aumentar quantidade"
+onclick="alterarQuantidade('200',1)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<div class="card">
+
+<img
+src="img/pudim2.jpg"
+alt="Pudim Tradicional 500 gramas">
+
+<div class="info">
+
+<h3>Pudim Tradicional</h3>
+
+<span class="peso">
+500g
+</span>
+
+<p>
+
+Perfeito para compartilhar com a família.
+
+</p>
+
+<div class="preco">
+
+R$
+
+<span id="preco500">
+0,00
+</span>
+
+</div>
+
+<div class="controle">
+
+<button
+aria-label="Diminuir quantidade"
+onclick="alterarQuantidade('500',-1)">
+−
+</button>
+
+<span id="qtd500">
+0
+</span>
+
+<button
+aria-label="Aumentar quantidade"
+onclick="alterarQuantidade('500',1)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<section class="pedido">
+
+    <div class="pedido-box">
+
+        <h2>Seu Pedido</h2>
+
+        <div class="linha">
+
+            <span>Pudim 200g</span>
+
+            <span id="resumo200">
+                0 x R$ 0,00
+            </span>
+
+        </div>
+
+        <div class="linha subtotal">
+
+            <span>Subtotal</span>
+
+            <span id="subtotal200">
+                R$ 0,00
+            </span>
+
+        </div>
+
+        <div class="linha">
+
+            <span>Pudim 500g</span>
+
+            <span id="resumo500">
+                0 x R$ 0,00
+            </span>
+
+        </div>
+
+        <div class="linha subtotal">
+
+            <span>Subtotal</span>
+
+            <span id="subtotal500">
+                R$ 0,00
+            </span>
+
+        </div>
+
+        <hr>
+
+        <div class="linha total">
+
+            <span>Total Geral</span>
+
+            <span id="totalGeral">
+                R$ 0,00
+            </span>
+
+        </div>
+
+        <button
+            id="btnWhatsapp"
+            class="btn-whats"
+            onclick="enviarPedido()">
+
+            🍮 Fazer Pedido no WhatsApp
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="video-section">
+
+<h2>
+
+Veja nosso pudim em vídeo 🍮
+
+</h2>
+
+<div class="video-wrapper">
+
+<iframe
+
+src="https://www.youtube.com/embed/XAU1wx2PPSE"
+
+title="Vídeo SaboreAna"
+
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</section>
+</main>
+<footer>
+<div class="footer-content">
+<h3>SaboreAna</h3>
+<p>
+Feito com ❤️ utilizando ingredientes selecionados.
+</p>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
