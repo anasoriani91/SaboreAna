@@ -8,8 +8,9 @@
 //==================================================
 
 // Altere apenas estes valores quando quiser mudar os preços
-const preco200 = 10.00;
-const preco500 = 20.00;
+const preco120 = 10.00;
+const preco500 = 35.00;
+const preco1 = 55.00;
 
 // Número do WhatsApp
 const numeroWhats = "5543991321383";
@@ -20,15 +21,21 @@ const numeroWhats = "5543991321383";
 
 const produtos = {
 
-    "200": {
-        nome: "Pudim Tradicional 200g",
-        preco: preco200,
+    "120": {
+        nome: "Pudim Tradicional 120g",
+        preco: preco120,
+        quantidade: 0
+    },
+	
+	"500": {
+        nome: "Pudim Tradicional 500g",
+        preco: preco500,
         quantidade: 0
     },
 
-    "500": {
-        nome: "Pudim Tradicional 500g",
-        preco: preco500,
+    "1": {
+        nome: "Pudim Tradicional 1Kg",
+        preco: preco1,
         quantidade: 0
     }
 
@@ -72,11 +79,14 @@ function alterarQuantidade(id, valor){
 
 function atualizarTela(){
 
-    document.getElementById("preco200").textContent =
-        preco200.toFixed(2).replace(".",",");
+    document.getElementById("preco120").textContent =
+        preco120.toFixed(2).replace(".",",");
 
     document.getElementById("preco500").textContent =
         preco500.toFixed(2).replace(".",",");
+		
+	document.getElementById("preco1").textContent =
+        preco1.toFixed(2).replace(".",",");
 
     let total = 0;
 

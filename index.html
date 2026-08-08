@@ -79,14 +79,14 @@ O resumo será atualizado automaticamente.
 
 <img
 src="img/pudim2.jpg"
-alt="Pudim Tradicional 200 gramas">
+alt="Pudim Tradicional 120 gramas">
 
 <div class="info">
 
 <h3>Pudim Tradicional</h3>
 
 <span class="peso">
-200g
+120g
 </span>
 
 <p>
@@ -100,7 +100,7 @@ Textura cremosa e sabor caseiro.
 
 R$
 
-<span id="preco200">
+<span id="preco120">
 0,00
 </span>
 
@@ -110,17 +110,17 @@ R$
 
 <button
 aria-label="Diminuir quantidade"
-onclick="alterarQuantidade('200',-1)">
+onclick="alterarQuantidade('120',-1)">
 −
 </button>
 
-<span id="qtd200">
+<span id="qtd120">
 0
 </span>
 
 <button
 aria-label="Aumentar quantidade"
-onclick="alterarQuantidade('200',1)">
+onclick="alterarQuantidade('120',1)">
 +
 </button>
 
@@ -187,7 +187,63 @@ onclick="alterarQuantidade('500',1)">
 
 </div>
 
+
+<div class="card">
+
+<img
+src="img/pudim2.jpg"
+alt="Pudim Tradicional 1 Kilo ">
+
+<div class="info">
+
+<h3>Pudim Tradicional</h3>
+
+<span class="peso">
+1Kg
+</span>
+
+<p>
+
+Perfeito para compartilhar com todo mundo.
+
+</p>
+
+<div class="preco">
+
+R$
+
+<span id="preco1">
+0,00
+</span>
+
 </div>
+
+<div class="controle">
+
+<button
+aria-label="Diminuir quantidade"
+onclick="alterarQuantidade('1',-1)">
+−
+</button>
+
+<span id="qtd1">
+0
+</span>
+
+<button
+aria-label="Aumentar quantidade"
+onclick="alterarQuantidade('1',1)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 <section class="pedido">
 
     <div class="pedido-box">
@@ -196,9 +252,9 @@ onclick="alterarQuantidade('500',1)">
 
         <div class="linha">
 
-            <span>Pudim 200g</span>
+            <span>Pudim 120g</span>
 
-            <span id="resumo200">
+            <span id="resumo120">
                 0 x R$ 0,00
             </span>
 
@@ -208,7 +264,7 @@ onclick="alterarQuantidade('500',1)">
 
             <span>Subtotal</span>
 
-            <span id="subtotal200">
+            <span id="subtotal120">
                 R$ 0,00
             </span>
 
@@ -229,6 +285,26 @@ onclick="alterarQuantidade('500',1)">
             <span>Subtotal</span>
 
             <span id="subtotal500">
+                R$ 0,00
+            </span>
+
+        </div>
+		
+		<div class="linha">
+
+            <span>Pudim 1kg</span>
+
+            <span id="resumo1">
+                0 x R$ 0,00
+            </span>
+
+        </div>
+
+        <div class="linha subtotal">
+
+            <span>Subtotal</span>
+
+            <span id="subtotal1">
                 R$ 0,00
             </span>
 
